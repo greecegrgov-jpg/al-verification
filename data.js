@@ -1,29 +1,23 @@
-const website = {
+const visaRecords = [
 
-    title: "e-Visa Portal",
+{
+    visaNumber: "80000001",
+    passport: "PA1234567",
+    firstName: "John",
+    lastName: "Doe",
+    nationality: "Pakistan",
+    status: "Approved",
+    certificate: "certificates/80000001.pdf"
+},
 
-    logo: {
-        image: "images/logo.png",
-        alt: "e-Visa Logo"
-    },
+{
+    visaNumber: "80000002",
+    passport: "AB9876543",
+    firstName: "Ali",
+    lastName: "Khan",
+    nationality: "Pakistan",
+    status: "Approved",
+    certificate: "certificates/80000002.pdf"
+}
 
-    language: {
-        default: "EN",
-        available: ["EN", "AL"]
-    },
-
-    headerButtons: {
-
-        notification: {
-            text: "🔔",
-            link: "pages/notifications.html"
-        },
-
-        login: {
-            text: "👤",
-            link: "pages/login.html"
-        }
-
-    }
-
-};
+];
