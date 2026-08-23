@@ -1228,7 +1228,331 @@
     </div>
 
 </div>        
-         
+<!-- =========================================
+     STEP 4 — FAMILY MEMBERS INFORMATION
+========================================= -->
+
+<div class="form-card" id="familyStep" style="display:none;">
+
+    <h2>Family members information</h2>
+
+
+    <!-- =====================================
+         FATHER INFORMATION
+    ====================================== -->
+
+    <div class="family-subsection">
+
+        <h3>Father information</h3>
+
+        <div class="form-grid">
+
+            <div class="field">
+                <label>4.1 Father's last name</label>
+
+                <input
+                    type="text"
+                    id="fatherLastName"
+                    placeholder="Last name"
+                >
+            </div>
+
+            <div class="field">
+                <label>4.2 Father's first name</label>
+
+                <input
+                    type="text"
+                    id="fatherFirstName"
+                    placeholder="First name"
+                >
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         MOTHER INFORMATION
+    ====================================== -->
+
+    <div class="family-subsection">
+
+        <h3>Mother information</h3>
+
+        <div class="form-grid">
+
+            <div class="field">
+                <label>4.3 Mother's last name</label>
+
+                <input
+                    type="text"
+                    id="motherLastName"
+                    placeholder="Last name"
+                >
+            </div>
+
+            <div class="field">
+                <label>4.4 Mother's first name</label>
+
+                <input
+                    type="text"
+                    id="motherFirstName"
+                    placeholder="First name"
+                >
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         MARITAL STATUS
+    ====================================== -->
+
+    <div class="family-subsection">
+
+        <div class="form-grid">
+
+            <div class="field">
+
+                <label>
+                    4.5 Current marital status
+                    <span class="required">*</span>
+                </label>
+
+                <select id="familyMaritalStatus" required>
+
+                    <option value="">
+                        Select status
+                    </option>
+
+                    <option value="single">
+                        Single
+                    </option>
+
+                    <option value="married">
+                        Married
+                    </option>
+
+                    <option value="divorced">
+                        Divorced
+                    </option>
+
+                    <option value="widowed">
+                        Widowed
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         SPOUSE INFORMATION
+         ONLY VISIBLE WHEN MARRIED
+    ====================================== -->
+
+    <div
+        id="spouseSection"
+        class="family-subsection"
+        style="display:none;"
+    >
+
+        <h3>Spouse information</h3>
+
+        <div class="form-grid">
+
+            <div class="field">
+
+                <label>
+                    4.6 Spouse's last name
+                    <span class="required">*</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="spouseLastName"
+                    placeholder="Last name"
+                >
+
+            </div>
+
+
+            <div class="field">
+
+                <label>
+                    4.7 Spouse's first name
+                    <span class="required">*</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="spouseFirstName"
+                    placeholder="First name"
+                >
+
+            </div>
+
+
+            <div class="field">
+
+                <label>
+                    4.8 Spouse's date of birth
+                    <span class="required">*</span>
+                </label>
+
+                <input
+                    type="date"
+                    id="spouseDateOfBirth"
+                >
+
+            </div>
+
+
+            <div class="field">
+
+                <label>
+                    4.9 Date of marriage
+                    <span class="required">*</span>
+                </label>
+
+                <input
+                    type="date"
+                    id="marriageDate"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         CHILDREN INFORMATION
+    ====================================== -->
+
+    <div class="family-subsection">
+
+        <h3>Children information</h3>
+
+        <div id="childrenContainer">
+
+            <!-- CHILD 1 -->
+
+            <div class="child-box">
+
+                <h4>Child 1</h4>
+
+                <div class="form-grid">
+
+                    <div class="field">
+
+                        <label>Last name</label>
+
+                        <input
+                            type="text"
+                            name="childLastName[]"
+                            placeholder="Last name"
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>First name</label>
+
+                        <input
+                            type="text"
+                            name="childFirstName[]"
+                            placeholder="First name"
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>Date of birth</label>
+
+                        <input
+                            type="date"
+                            name="childDateOfBirth[]"
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>Sex</label>
+
+                        <select name="childSex[]">
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option>Male</option>
+
+                            <option>Female</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADD CHILD BUTTON -->
+
+        <button
+            type="button"
+            id="addChildButton"
+            class="add-child-button"
+        >
+            + Add another child
+        </button>
+
+    </div>
+
+
+    <!-- =====================================
+         NAVIGATION
+    ====================================== -->
+
+    <div class="navigation-card">
+
+        <button
+            type="button"
+            id="backToVisa"
+            class="next-button"
+        >
+            ← Back
+        </button>
+
+        <button
+            type="button"
+            id="familyNextButton"
+            class="next-button"
+        >
+            Next →
+        </button>
+
+    </div>
+
+</div>         
     </form>
 
 </main>
@@ -1268,6 +1592,7 @@
 const personalStep = document.getElementById("personalStep");
 const passportStep = document.getElementById("passportStep");
 const visaStep = document.getElementById("visaStep");    
+const familyStep = document.getElementById("familyStep");
 
 const nextButton = document.getElementById("nextButton");
 const backButton = document.getElementById("backToPersonal");
