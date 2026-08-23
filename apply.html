@@ -1121,8 +1121,6 @@
 
 <script>
 
-<script>
-
 const personalStep = document.getElementById("personalStep");
 const passportStep = document.getElementById("passportStep");
 
@@ -1131,7 +1129,9 @@ const backButton = document.getElementById("backToPersonal");
 const passportNextButton = document.getElementById("passportNextButton");
 
 
-/* PERSONAL INFORMATION → PASSPORT */
+/* =========================================
+   PERSONAL INFORMATION → PASSPORT
+========================================= */
 
 nextButton.addEventListener("click", function () {
 
@@ -1153,7 +1153,9 @@ nextButton.addEventListener("click", function () {
 });
 
 
-/* PASSPORT → PERSONAL */
+/* =========================================
+   PASSPORT → PERSONAL
+========================================= */
 
 backButton.addEventListener("click", function () {
 
@@ -1168,7 +1170,9 @@ backButton.addEventListener("click", function () {
 });
 
 
-/* PASSPORT NEXT */
+/* =========================================
+   PASSPORT NEXT
+========================================= */
 
 passportNextButton.addEventListener("click", function () {
 
@@ -1176,26 +1180,21 @@ passportNextButton.addEventListener("click", function () {
         "input[required], select[required]"
     );
 
-    let valid = true;
-
-    passportFields.forEach(function (field) {
+    for (const field of passportFields) {
 
         if (!field.checkValidity()) {
-            valid = false;
+            field.reportValidity();
+            return;
         }
 
-    });
-
-    if (!valid) {
-        passportStep.querySelector(
-            "input:invalid, select:invalid"
-        ).reportValidity();
-
-        return;
     }
 
     alert("Passport information completed successfully.");
 
 });
 
+
 </script>
+     
+</body>
+</html>
