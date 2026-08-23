@@ -608,3 +608,118 @@ body {
     }
 
 }
+/* =========================================
+   VISA SELECTION MESSAGE
+========================================= */
+
+.visa-selection-message {
+    width: calc(100% - 40px);
+    max-width: 1120px;
+
+    margin: 18px auto 35px;
+
+    padding: 5px 10px;
+
+    border-top: 2px dashed #f00000;
+    border-bottom: 2px dashed #f00000;
+
+    text-align: center;
+
+    color: #f00000;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   APPLICATION PHASES
+========================================= */
+
+.application-phases {
+    width: calc(100% - 40px);
+    max-width: 1120px;
+
+    margin: 0 auto 30px;
+}
+
+.application-phases > h2 {
+    text-align: center;
+
+    font-size: 18px;
+
+    margin: 0 0 25px;
+}
+
+
+/* PHASE BOX */
+
+.phase-card {
+    background: #ffffff;
+
+    border: 1px solid #c7d3df;
+
+    border-radius: 3px;
+
+    padding: 25px;
+
+    margin-bottom: 24px;
+}
+
+.phase-card h3 {
+    margin: 0 0 15px;
+
+    font-size: 18px;
+}
+
+.phase-card p {
+    margin: 0 0 10px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.phase-card ol {
+    margin: 8px 0 10px;
+
+    padding-left: 22px;
+}
+
+.phase-card li {
+    margin-bottom: 7px;
+
+    font-size: 12px;
+
+    line-height: 1.45;
+}
+
+.success-text {
+    color: #00a52a;
+}
+
+.important-text {
+    color: #f00000;
+    font-weight: 700;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .visa-selection-message {
+        width: calc(100% - 24px);
+
+        font-size: 13px;
+    }
+
+    .application-phases {
+        width: calc(100% - 24px);
+    }
+
+    .phase-card {
+        padding: 18px;
+    }
+
+}
