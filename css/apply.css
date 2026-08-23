@@ -215,12 +215,12 @@ body {
 .navigation-card {
     background: white;
     border: 1px solid #c8d4df;
-
     margin-top: 15px;
     padding: 22px;
 
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .next-button {
