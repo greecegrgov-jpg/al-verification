@@ -1135,11 +1135,17 @@ const passportNextButton = document.getElementById("passportNextButton");
 
 nextButton.addEventListener("click", function () {
 
-    const form = document.getElementById("personalForm");
+    const personalFields = personalStep.querySelectorAll(
+        "input[required], select[required], textarea[required]"
+    );
 
-    if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
+    for (const field of personalFields) {
+
+        if (!field.checkValidity()) {
+            field.reportValidity();
+            return;
+        }
+
     }
 
     personalStep.style.display = "none";
