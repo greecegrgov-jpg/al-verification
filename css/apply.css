@@ -310,5 +310,41 @@ body {
         flex-direction: column;
         gap: 20px;
     }
+/* =========================================
+   APPLY PAGE - INFORMATION BOX
+========================================= */
 
+.info-box {
+    width: 100%;
+    max-width: 1120px;
+    margin: 14px auto;
+    padding: 18px 22px;
+    background: #ffffff;
+    border: 1px solid #c7d3df;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.info-box h2 {
+    margin: 0 0 14px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #111;
+}
+
+.info-box ol {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.info-box li {
+    margin-bottom: 8px;
+    font-size: 13px;
+    line-height: 1.45;
+    color: #111;
+}
+
+.info-box strong {
+    color: #ff0000;
+}
 }
