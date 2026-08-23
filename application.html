@@ -1380,6 +1380,32 @@ backToPassport.addEventListener("click", function () {
     });
 
 });
+    /* =========================================
+   VISA INFORMATION → NEXT
+========================================= */
+
+const visaNextButton =
+    document.getElementById("visaNextButton");
+
+visaNextButton.addEventListener("click", function () {
+
+    const visaFields = visaStep.querySelectorAll(
+        "input[required], select[required]"
+    );
+
+    for (const field of visaFields) {
+
+        if (!field.checkValidity()) {
+            field.reportValidity();
+            return;
+        }
+
+    }
+
+    alert("Visa information completed successfully.");
+
+});
+    
 </script>
 
 </body>
