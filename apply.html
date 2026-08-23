@@ -1008,7 +1008,6 @@ alert("Passport information completed successfully.");
 
 });
 
-
 /* =========================================
    VISA TYPE SELECTION
 ========================================= */
@@ -1024,13 +1023,26 @@ visaSelectableCards.forEach(function (card) {
 
         const visaType = this.dataset.visa;
 
-        alert("Selected Visa: " + visaType);
+        console.log("Selected Visa:", visaType);
+
+        if (
+            visaType === "electronic" ||
+            visaType === "A" ||
+            visaType === "C" ||
+            visaType === "D"
+        ) {
+
+            window.location.href =
+                "application.html?visa=" +
+                encodeURIComponent(visaType);
+
+        }
 
     });
 
 });
-     
+
 </script>
 
 </body>
-</html>
+</html>     
