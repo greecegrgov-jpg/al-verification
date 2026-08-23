@@ -823,3 +823,21 @@ body {
     }
 
 }
+/* =========================================
+   VISA TYPE HOVER & SELECTION
+========================================= */
+
+.visa-selectable {
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+}
+
+/* Mouse le jane par red border */
+.visa-selectable:hover {
+    border: 2px solid #f00000;
+}
+
+/* Click ke baad selected card */
+.visa-selectable.visa-selected {
+    border: 2px solid #f00000;
+}
