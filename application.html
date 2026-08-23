@@ -1094,6 +1094,140 @@
     </div>
 
 </div>
+<!-- =========================================
+     STEP 3 — VISA INFORMATION
+========================================= -->
+
+<div class="form-card" id="visaStep" style="display:none;">
+
+    <h2>Visa information</h2>
+
+    <div class="form-grid">
+
+        <!-- 3.1 -->
+        <div class="field">
+            <label>
+                3.1 Visa type
+                <span class="required">*</span>
+            </label>
+
+            <select id="visaType" required>
+                <option value="">Select visa type</option>
+                <option>Electronic Visa</option>
+                <option>Visa Type "A"</option>
+                <option>Visa Type "C"</option>
+                <option>Visa Type "D"</option>
+            </select>
+        </div>
+
+
+        <!-- 3.2 -->
+        <div class="field">
+            <label>
+                3.2 Purpose of travel
+                <span class="required">*</span>
+            </label>
+
+            <select id="travelPurpose" required>
+                <option value="">Select purpose</option>
+                <option>Tourism</option>
+                <option>Business</option>
+                <option>Family visit</option>
+                <option>Study</option>
+                <option>Employment</option>
+                <option>Transit</option>
+                <option>Other</option>
+            </select>
+        </div>
+
+
+        <!-- 3.3 -->
+        <div class="field">
+            <label>
+                3.3 Intended date of arrival
+                <span class="required">*</span>
+            </label>
+
+            <input
+                type="date"
+                id="arrivalDate"
+                required
+            >
+        </div>
+
+
+        <!-- 3.4 -->
+        <div class="field">
+            <label>
+                3.4 Intended date of departure
+                <span class="required">*</span>
+            </label>
+
+            <input
+                type="date"
+                id="departureDate"
+                required
+            >
+        </div>
+
+
+        <!-- 3.5 -->
+        <div class="field">
+            <label>
+                3.5 Number of entries
+                <span class="required">*</span>
+            </label>
+
+            <select id="entries" required>
+                <option value="">Select</option>
+                <option>Single entry</option>
+                <option>Double entry</option>
+                <option>Multiple entries</option>
+            </select>
+        </div>
+
+
+        <!-- 3.6 -->
+        <div class="field">
+            <label>
+                3.6 Duration of stay
+                <span class="required">*</span>
+            </label>
+
+            <input
+                type="text"
+                id="durationOfStay"
+                placeholder="Enter duration of stay"
+                required
+            >
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <div class="navigation-card">
+
+        <button
+            type="button"
+            id="backToPassport"
+            class="next-button"
+        >
+            ← Back
+        </button>
+
+        <button
+            type="button"
+            id="visaNextButton"
+            class="next-button"
+        >
+            Next →
+        </button>
+
+    </div>
+
+</div>        
          
     </form>
 
@@ -1133,6 +1267,7 @@
 
 const personalStep = document.getElementById("personalStep");
 const passportStep = document.getElementById("passportStep");
+const visaStep = document.getElementById("visaStep");    
 
 const nextButton = document.getElementById("nextButton");
 const backButton = document.getElementById("backToPersonal");
@@ -1212,12 +1347,40 @@ passportNextButton.addEventListener("click", function () {
 
     }
 
-alert("Passport information completed successfully.");
+    passportStep.style.display = "none";
+    visaStep.style.display = "block";
+
+    steps[1].classList.remove("active");
+    steps[2].classList.add("active");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
 });
+/* =========================================
+   VISA → PASSPORT
+========================================= */
 
+const backToPassport =
+    document.getElementById("backToPassport");
 
+backToPassport.addEventListener("click", function () {
+
+    visaStep.style.display = "none";
+    passportStep.style.display = "block";
+
+    steps[2].classList.remove("active");
+    steps[1].classList.add("active");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
 </script>
-     
+
 </body>
-</html>
+</html>    
