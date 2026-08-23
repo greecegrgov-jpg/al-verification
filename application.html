@@ -1705,12 +1705,9 @@ backToPassport.addEventListener("click", function () {
     });
 
 });
-    /* =========================================
-   VISA INFORMATION → NEXT
+/* =========================================
+   VISA INFORMATION → FAMILY INFORMATION
 ========================================= */
-
-const visaNextButton =
-    document.getElementById("visaNextButton");
 
 visaNextButton.addEventListener("click", function () {
 
@@ -1727,7 +1724,37 @@ visaNextButton.addEventListener("click", function () {
 
     }
 
-    alert("Visa information completed successfully.");
+    visaStep.style.display = "none";
+    familyStep.style.display = "block";
+
+    steps[2].classList.remove("active");
+    steps[3].classList.add("active");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+    /* =========================================
+   FAMILY INFORMATION → VISA INFORMATION
+========================================= */
+
+const backToVisa =
+    document.getElementById("backToVisa");
+
+backToVisa.addEventListener("click", function () {
+
+    familyStep.style.display = "none";
+    visaStep.style.display = "block";
+
+    steps[3].classList.remove("active");
+    steps[2].classList.add("active");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
 });
     
