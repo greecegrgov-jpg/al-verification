@@ -516,3 +516,95 @@ body {
     font-size: 12px;
     line-height: 1.45;
 }
+/* =========================================
+   VISA TYPES SECTION
+========================================= */
+
+.visa-types-section {
+    width: calc(100% - 40px);
+    max-width: 1120px;
+    margin: 18px auto;
+}
+
+.visa-section-title {
+    text-align: center;
+    font-size: 18px;
+    margin: 18px 0 15px;
+}
+
+.visa-type-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    margin-bottom: 25px;
+}
+
+.visa-type-card {
+    position: relative;
+    background: #ffffff;
+    border: 2px dashed #c7d3df;
+    padding: 26px 25px;
+    min-height: 225px;
+}
+
+.visa-type-card.selected {
+    border: 2px solid #f00000;
+}
+
+.visa-type-card h3 {
+    margin: 0 0 5px;
+    font-size: 17px;
+}
+
+.visa-type-card h4 {
+    margin: 0 0 15px;
+    font-size: 14px;
+}
+
+.visa-type-card p {
+    margin: 0 0 15px;
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.visa-type-card a {
+    color: #008bd2;
+    text-decoration: none;
+}
+
+.visa-type-card a:hover {
+    text-decoration: underline;
+}
+
+.selected-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background: #ffffff;
+    border-left: 2px solid #f00000;
+    border-bottom: 2px solid #f00000;
+
+    color: #f00000;
+
+    padding: 5px 9px;
+
+    font-size: 9px;
+    font-weight: bold;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .visa-types-section {
+        width: calc(100% - 24px);
+    }
+
+    .visa-type-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+}
