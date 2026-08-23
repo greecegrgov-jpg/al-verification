@@ -1128,6 +1128,8 @@ const nextButton = document.getElementById("nextButton");
 const backButton = document.getElementById("backToPersonal");
 const passportNextButton = document.getElementById("passportNextButton");
 
+const steps = document.querySelectorAll(".steps .step");
+
 
 /* =========================================
    PERSONAL INFORMATION → PASSPORT
@@ -1150,6 +1152,9 @@ nextButton.addEventListener("click", function () {
 
     personalStep.style.display = "none";
     passportStep.style.display = "block";
+     
+steps[0].classList.remove("active");
+steps[1].classList.add("active");
 
     window.scrollTo({
         top: 0,
@@ -1167,6 +1172,8 @@ backButton.addEventListener("click", function () {
 
     passportStep.style.display = "none";
     personalStep.style.display = "block";
+steps[1].classList.remove("active");
+steps[0].classList.add("active");     
 
     window.scrollTo({
         top: 0,
