@@ -455,8 +455,9 @@
     <div class="visa-type-row">
 
         <!-- ELECTRONIC VISA -->
-<div class="visa-type-card visa-selectable" data-visa="electronic">
-            <span class="selected-label">SELECTED</span>
+<div class="visa-type-card visa-selectable"
+     data-visa="electronic"
+     onclick="window.location.href='./application.html?visa=electronic'">            <span class="selected-label">SELECTED</span>
 
             <h3>Electronic Visa</h3>
 
@@ -502,8 +503,9 @@
     <div class="visa-type-row">
 
         <!-- VISA TYPE A -->
-<div class="visa-type-card visa-selectable" data-visa="A">
-            <h3>Visa Type “A”</h3>
+<div class="visa-type-card visa-selectable"
+     data-visa="A"
+     onclick="window.location.href='./application.html?visa=A'">            <h3>Visa Type “A”</h3>
 
             <h4>Airport transit visa</h4>
 
@@ -530,8 +532,9 @@
 
 
         <!-- VISA TYPE C -->
-<div class="visa-type-card visa-selectable" data-visa="C">
-            <h3>Visa Type “C”</h3>
+<div class="visa-type-card visa-selectable"
+     data-visa="C"
+     onclick="window.location.href='./application.html?visa=C'">            <h3>Visa Type “C”</h3>
 
             <h4>Short stay visa</h4>
 
@@ -558,8 +561,9 @@
     <div class="visa-type-row">
 
         <!-- VISA TYPE D -->
-<div class="visa-type-card visa-selectable" data-visa="D">
-            <h3>Visa Type “D”</h3>
+<div class="visa-type-card visa-selectable"
+     data-visa="D"
+     onclick="window.location.href='./application.html?visa=D'">            <h3>Visa Type “D”</h3>
 
             <h4>Long stay visa</h4>
 
@@ -919,45 +923,6 @@
     </p>
 
 </footer>
-
-
-<script>
-
-/* =========================================
-   VISA TYPE SELECTION
-========================================= */
-
-const visaSelectableCards =
-    document.querySelectorAll(".visa-selectable");
-
-console.log("Visa cards found:", visaSelectableCards.length);
-
-visaSelectableCards.forEach(function (card) {
-
-    card.addEventListener("click", function () {
-
-        const visaType = this.dataset.visa;
-
-        console.log("Selected Visa:", visaType);
-
-        if (
-            visaType === "electronic" ||
-            visaType === "A" ||
-            visaType === "C" ||
-            visaType === "D"
-        ) {
-
-            window.location.href =
-                "application.html?visa=" +
-                encodeURIComponent(visaType);
-
-        }
-
-    });
-
-});
-
-</script>
 
 </body>
 </html>     
