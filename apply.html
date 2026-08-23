@@ -2044,7 +2044,44 @@ passportNextButton.addEventListener("click", function () {
 
     }
 
-    alert("Passport information completed successfully.");
+alert("Passport information completed successfully.");
+
+});
+
+
+/* =========================================
+   VISA TYPE SELECTION
+========================================= */
+
+const visaSelectableCards =
+    document.querySelectorAll(".visa-selectable");
+
+visaSelectableCards.forEach(function (card) {
+
+    card.addEventListener("click", function () {
+
+        visaSelectableCards.forEach(function (item) {
+            item.classList.remove("visa-selected");
+        });
+
+        this.classList.add("visa-selected");
+
+        const visaType = this.dataset.visa;
+
+        if (
+            visaType === "electronic" ||
+            visaType === "A" ||
+            visaType === "C" ||
+            visaType === "D"
+        ) {
+
+            window.location.href =
+                "application.html?visa=" +
+                encodeURIComponent(visaType);
+
+        }
+
+    });
 
 });
 
