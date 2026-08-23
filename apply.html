@@ -1021,14 +1021,18 @@ visaSelectableCards.forEach(function (card) {
 
     card.addEventListener("click", function () {
 
+        /* Remove selected state from all cards */
         visaSelectableCards.forEach(function (item) {
             item.classList.remove("visa-selected");
         });
 
+        /* Add selected state to clicked card */
         this.classList.add("visa-selected");
 
+        /* Get selected visa type */
         const visaType = this.dataset.visa;
 
+        /* Open 7-step application page */
         if (
             visaType === "electronic" ||
             visaType === "A" ||
@@ -1045,9 +1049,3 @@ visaSelectableCards.forEach(function (card) {
     });
 
 });
-
-
-</script>
-     
-</body>
-</html>
