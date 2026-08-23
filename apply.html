@@ -1017,34 +1017,15 @@ alert("Passport information completed successfully.");
 const visaSelectableCards =
     document.querySelectorAll(".visa-selectable");
 
+console.log("Visa cards found:", visaSelectableCards.length);
+
 visaSelectableCards.forEach(function (card) {
 
     card.addEventListener("click", function () {
 
-        /* Remove selected state from all cards */
-        visaSelectableCards.forEach(function (item) {
-            item.classList.remove("visa-selected");
-        });
-
-        /* Add selected state to clicked card */
-        this.classList.add("visa-selected");
-
-        /* Get selected visa type */
         const visaType = this.dataset.visa;
 
-        /* Open 7-step application page */
-        if (
-            visaType === "electronic" ||
-            visaType === "A" ||
-            visaType === "C" ||
-            visaType === "D"
-        ) {
-
-            window.location.href =
-                "application.html?visa=" +
-                encodeURIComponent(visaType);
-
-        }
+        alert("Selected Visa: " + visaType);
 
     });
 
