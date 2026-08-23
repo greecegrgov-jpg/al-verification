@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function startSlider() {
-        timer = setInterval(nextSlide, 4000);
+        timer = setInterval(nextSlide, 10000);
     }
 
     function stopSlider() {
