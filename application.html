@@ -1773,6 +1773,39 @@ familyNextButton.addEventListener("click", function () {
 
     alert("Family information completed successfully.");
 
+});  
+/* =========================================
+   MARITAL STATUS → SPOUSE INFORMATION
+========================================= */
+
+const familyMaritalStatus =
+    document.getElementById("familyMaritalStatus");
+
+const spouseSection =
+    document.getElementById("spouseSection");
+
+familyMaritalStatus.addEventListener("change", function () {
+
+    if (this.value === "married") {
+
+        spouseSection.style.display = "block";
+
+        document.getElementById("spouseLastName").required = true;
+        document.getElementById("spouseFirstName").required = true;
+        document.getElementById("spouseDateOfBirth").required = true;
+        document.getElementById("marriageDate").required = true;
+
+    } else {
+
+        spouseSection.style.display = "none";
+
+        document.getElementById("spouseLastName").required = false;
+        document.getElementById("spouseFirstName").required = false;
+        document.getElementById("spouseDateOfBirth").required = false;
+        document.getElementById("marriageDate").required = false;
+
+    }
+
 });    
     
 </script>
